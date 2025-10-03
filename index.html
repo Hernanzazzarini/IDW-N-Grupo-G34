@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CentMed - Centro Médico </title>
+    <link rel="stylesheet" href="estilos/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--  seccion Header -->
+    <header>
+        <div class="container ">
+            <a class="navbar-brand fw-bold" href="index.html">Centro medico</a>
+            <nav class="navbar navbar-expand-lg navbar-light  shadow-sm">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarResponsive">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link " href="./pages/institucional.html">Institucional</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="main-index">
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>Cuidamos de tu salud con excelencia y calidez humana</h1>
+                <p>Tu bienestar es nuestra prioridad. Contamos con tecnología de punta y un equipo médico de primer
+                    nivel para brindarte la mejor atención.</p>
+                <div class="hero-buttons">
+                    <a href="./pages/contacto.html" class="btn">Solicitar cita</a>
+                    <a href="./pages/institucional.html" class="btn btn-secondary">Conoce más</a>
+                </div>
+            </div>
+        </section>
+
+        <!--CARDS Boostrap nuestros profesionales -->
+        <section class="tarjet">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img  src="./imagenes/cirujana.jpg" class="medico1 card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mariana Lopez.Cirujana</h5>
+                            <p class="card-text">Medica cirujana especializada en procedimientos generales y minimamente
+                                invasivos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="./imagenes/cardiologo.jpg" class=" medico1 card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Oscar Reinozo.Cardiologo</h5>
+                            <p class="card-text">Diploma de honor en procedimientos cardiologicos avanzados.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img  src="./imagenes/pediatra.jpg" class="medico1 card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Matìas Candido.Pediatra</h5>
+                            <p class="card-text">Pediatra con 30 años de experiencia en niños y adolescentes </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img  src="./imagenes/radiologo.jpg" class=" medico1 card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Alvaro Echegoyen.Radiologo </h5>
+                            <p class="card-text">Radiologo y especialista en diagnostico por imagenes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Sección de servicios -->
+        <section class="container ">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="services">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Consulta General</h3>
+                    <p>Atención médica integral para toda la familia con profesionales altamente capacitados.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Chequeos Preventivos</h3>
+                    <p>Programas de prevención y detección temprana de enfermedades para cuidar tu salud.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3>Urgencias 24/7</h3>
+                    <p>Atención de urgencias las 24 horas con equipos de respuesta inmediata y profesionales
+                        especializados.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de especialidades -->
+        <section class="specialties">
+            <div class="container">
+                <h2 class="section-title">Nuestras Especialidades</h2>
+                <div class="specialty-grid">
+                    <div class="specialty-card">
+                        <div class="specialty-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Neurología</h3>
+                    </div>
+                    <div class="specialty-card">
+                        <div class="specialty-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Cardiología</h3>
+                    </div>
+                    <div class="specialty-card">
+                        <div class="specialty-icon">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                        <h3>Pediatría</h3>
+                    </div>
+                    <div class="specialty-card">
+                        <div class="specialty-icon">
+                            <i class="fas fa-x-ray"></i>
+                        </div>
+                        <h3>Radiología</h3>
+                    </div>
+                    <div class="specialty-card">
+                        <div class="specialty-icon">
+                            <i class="fas fa-teeth"></i>
+                        </div>
+                        <h3>Odontología</h3>
+                    </div>
+                    <div class="specialty-card">
+                        <div class="specialty-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Oftalmología</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de testimonios -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Opiniones de Nuestros Pacientes</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            Excelente atención. Los médicos son muy profesionales y el personal siempre está
+                            dispuesto a
+                            ayudar. Las instalaciones son modernas y limpias.
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">M</div>
+                            <div>
+                                <h4>María González</h4>
+                                <p>Paciente</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            Llevo a mi familia aquí desde hace años. La confianza y calidad en el servicio es
+                            incomparable. Siempre solucionan nuestros problemas de salud.
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">J</div>
+                            <div>
+                                <h4>Jorge Martínez</h4>
+                                <p>Paciente</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            Tuve una emergencia y me atendieron inmediatamente. El equipo de urgencias fue
+                            rápido y
+                            eficiente. Gracias por salvar mi vida.
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">C</div>
+                            <div>
+                                <h4>Carlos López</h4>
+                                <p>Paciente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de información de contacto -->
+        <section class="container">
+            <h2 class="section-title">Cómo Contactarnos</h2>
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Ubicación</h3>
+                    <p>Av. Principal #123, Ciudad</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Teléfonos</h3>
+                    <p>Consultas: (123) 456-7890</p>
+                    <p>Urgencias: (123) 456-HELP</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Horarios</h3>
+                    <p>Lunes a Viernes: 7:00 am - 9:00 pm</p>
+                    <p>Sábados: 8:00 am - 6:00 pm</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de llamada a la acción -->
+        <section class="container">
+            <div class="cta">
+                <h2>¿Necesitas atención médica?</h2>
+                <p>No esperes más, agenda tu cita ahora mismo y cuida de tu salud con los mejores profesionales.
+                </p>
+                <a href="#" class="btn">Agendar cita en línea</a>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Clínica Salud Integral</h3>
+                    <p>Brindamos servicios de salud de alta calidad con tecnología de punta y un equipo médico de
+                        excelencia.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Especialidades</a></li>
+                        <li><a href="#">Médicos</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#">Consulta General</a></li>
+                        <li><a href="#">Chequeos Preventivos</a></li>
+                        <li><a href="#">Urgencias</a></li>
+                        <li><a href="#">Laboratorio</a></li>
+                        <li><a href="#">Imagenología</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Horario de Atención</h3>
+                    <ul>
+                        <li>Lunes a Viernes: 7:00 am - 9:00 pm</li>
+                        <li>Sábados: 8:00 am - 6:00 pm</li>
+                        <li>Domingos: Solo urgencias</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Clínica Salud Integral. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/animaciones.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
