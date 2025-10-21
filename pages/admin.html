@@ -3,33 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="AGREGAR RUTA CSS">
-    <title>Administración de Médicos</title>
+    <link rel="stylesheet" href="../estilos/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title >Administración de Médicos</title>
 </head>
 <body>
-    <h1>Administración de Médicos</h1>
-    <form id="medicoForm">
-        <input type="hidden" id="medicoIndex" value="-1">
-        <input type="text" id="nombre y apellido" placeholder="Nombre y apellido" required>
-        <input type="text" id="Telefono" placeholder="Telefono" required>
-        <input type="text" id="especialidad" placeholder="Especialidad" required>
-        <input type="text" id="Obra Social" placeholder="Obra Social" required>
-        <button type="submit">Agregar Médico</button>
+
+    <h1 class="titulo_admin" >Administración de Médicos</h1>
+<div class=" table-responsive">
+    <form id="medicoForm" class="d-flex flex-column flex-md-row align-items-md-center">
+        <input class="entradas"   type="hidden" id="medicoIndex" value="-1">
+        <input class="entradas" type="text" id="nombre y apellido" placeholder="Nombre y apellido" required>
+        <input class="entradas" type="text" id="Telefono" placeholder="Telefono" required>
+        <input class="entradas"  type="text" id="especialidad" placeholder="Especialidad" required>
+        <input class="entradas" type="text" id="Obra Social" placeholder="Obra Social" required>
+        <button class="btn btn-primary btn-sm" type="submit">Agregar Médico</button>
     </form>
-    
-    <table id="medicosTable">
+<div class="table-responsive">
+    <table id="medicosTable" >
         <thead>
-            <tr>
-                <th>Nombre y apellido</th>
-                <th>Telefono</th>
-                <th>Especialidad</th>
-                <th>Obra Social</th>
-                <th>Acciones</th>
+            <tr class="envoltura-tr">
+                <th class="tabla-th">Nombre y apellido</th>
+                <th class="tabla-th" >Telefono</th>
+                <th class="tabla-th">Especialidad</th>
+                <th class="tabla-th">Obra Social</th>
+                <th class="tabla-th">Acciones</th>
             </tr>
         </thead>
         <tbody>
         </tbody>
     </table>
+</div>
+</div>
 
     <script src="../js/admin.js"></script>
 </body>

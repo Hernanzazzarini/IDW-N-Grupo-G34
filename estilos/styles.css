@@ -668,12 +668,7 @@ footer {
     
   
 /*----------------------------- ESTILOS DE INFORMACION INSTITUCIONAL --------------------------------------------------------*/
-     * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+
 
 body {
     line-height: 1.6;
@@ -785,3 +780,55 @@ body {
         text-align: center;       
     }
 }
+/* -----------------------------estilos de admin----------------------------- */
+
+.titulo_admin{
+    background-color:#2b5e8e ;
+    color: #f0f0f0;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#medicoForm{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 18px;
+    padding-left: 40px;
+
+}
+.entradas{
+    background-color:#e3eef1 ;
+    border:solid 0.8px rgb(194, 217, 221);
+    color:#778899
+}
+
+.table-responsive{
+    
+    background-color:#778899 ;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+}
+
+.tabla-th{
+   
+    background-color:#6A5ACD ;
+    width: 200px;
+    height: auto;
+    color:#f0f0f0 ;
+    padding:10px 0px 10px 0px
+}
+.btn-primary{
+    margin-bottom:10px 0px 10px 0px; 
+}
+.btn-danger {
+    margin:10px 0px 10px 0px;    
+}
+/* .container-crud{
+    
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    background-color:#C0C0C0;
+    padding: 50px 50px;
+} */
