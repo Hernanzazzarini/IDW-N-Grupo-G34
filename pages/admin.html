@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../estilos/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title >Administración de Médicos</title>
+    <title>Administración de Médicos</title>
 </head>
-<body>
+<body  class="admin-page">
+    
 
     <h1 class="titulo_admin" >Administración de Médicos</h1>
-<div class=" table-responsive">
-    <form id="medicoForm" class="d-flex flex-column flex-md-row align-items-md-center">
+
+    <form id="medicoForm" class="d-flex flex-column flex-sm-row" >
         <input class="entradas"   type="hidden" id="medicoIndex" value="-1">
         <input class="entradas" type="text" id="nombre y apellido" placeholder="Nombre y apellido" required>
         <input class="entradas" type="text" id="Telefono" placeholder="Telefono" required>
@@ -19,7 +20,7 @@
         <input class="entradas" type="text" id="Obra Social" placeholder="Obra Social" required>
         <button class="btn btn-primary btn-sm" type="submit">Agregar Médico</button>
     </form>
-<div class="table-responsive">
+    <div class="table-responsive">
     <table id="medicosTable" >
         <thead>
             <tr class="envoltura-tr">
@@ -33,8 +34,9 @@
         <tbody>
         </tbody>
     </table>
-</div>
-</div>
+    </div>
+
+
 
     <script src="../js/admin.js"></script>
 </body>

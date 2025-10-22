@@ -20,8 +20,8 @@ function cargarMedicos() {
         ;
         const accionesCell = row.insertCell(4);
         accionesCell.innerHTML = `
-            <button class="btn btn-primary btn-sm" onclick="editarMedico(${index})">Modificar</button>
-            <button class="btn btn-danger btn-sm"   onclick="eliminarMedico(${index})">Eliminar</button>
+            <button class=" modificar btn btn-primary btn-sm" onclick="editarMedico(${index})">Modificar</button>
+            <button class=" eliminar btn btn-danger btn-sm"   onclick="eliminarMedico(${index})">Eliminar</button>
         `;
     });
 }
