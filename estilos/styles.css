@@ -1,0 +1,934 @@
+<<<<<<< Updated upstream
+=======
+/* --------------------------------------------------------------------ESTILOS DEL INDEX ---------------------------------------------*/
+
+ 
+ /* Estilos generales */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+
+/* Variables de colores y estilos para el sector salud */ 
+:root { --color-primary: #2b5e8e; --color-secondary: #4fb0c6; --color-accent: #ff6b6b; --color-light: #f8f9fa; --color-dark: #2c3e50; --spacing-sm: 0.5rem; --spacing-md: 1rem; --spacing-lg: 2rem; --spacing-xl: 4rem; --border-radius: 8px; --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); --transition: all 0.3s ease; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Header y navegación */
+header {
+    background-color: white;
+    color: var(--color-primary);
+    padding: var(--spacing-md) 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--box-shadow);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    margin-right: var(--spacing-sm);
+    color: var(--color-secondary);
+}
+
+.logo span {
+    color: var(--color-primary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: var(--spacing-lg);
+}
+
+nav ul li a {
+    color: var(--color-dark);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    padding: var(--spacing-sm) 0;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-secondary);
+    transition: var(--transition);
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--color-secondary);
+}
+
+.main-index {
+    max-width: 100%;
+    margin: 0rem auto;
+    padding: 0rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  }
+.medico1{
+    width: 100%;
+    object-fit: cover;
+   
+}
+
+/*  */
+
+
+.emergency-button {
+    background-color: var(--color-accent);
+    color: white;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+.emergency-button i {
+    margin-right: var(--spacing-sm);
+}
+
+.emergency-button:hover {
+    background-color: #ff5252;
+    transform: scale(1.05);
+}
+
+/* Sección Hero */
+.hero {
+    background: linear-gradient(rgba(43, 94, 142, 0.8), rgba(43, 94, 142, 0.8)), url('https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: var(--spacing-md);
+    animation: fadeInDown 1s ease;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 0 auto var(--spacing-lg);
+    max-width: 600px;
+    animation: fadeInUp 1s ease;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: white;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    animation: fadeIn 1.5s ease;
+}
+
+.btn:hover {
+    background-color: #3a9aad;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid white;
+    margin-left: var(--spacing-md);
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: var(--color-primary);
+}
+
+/* Sección de servicios */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-primary);
+    position: relative;
+    padding-bottom: var(--spacing-md);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-secondary);
+}
+
+.service-card {
+    background-color: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    text-align: center;
+    border-top: 4px solid var(--color-secondary);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+.service-card h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Sección de especialidades */
+.specialties {
+    background-color: var(--color-light);
+    padding: var(--spacing-xl) 0;
+    margin-bottom: var(--spacing-xl);
+}
+
+.specialty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.specialty-card {
+    background-color: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.specialty-card:hover {
+    transform: translateY(-5px);
+}
+
+.specialty-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--color-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-md);
+    color: var(--color-primary);
+    font-size: 1.8rem;
+}
+
+/* Sección de testimonios */
+.testimonials {
+    padding: var(--spacing-xl) 0;
+    margin-bottom: var(--spacing-xl);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.testimonial-card {
+    background-color: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border-left: 4px solid var(--color-secondary);
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    padding: var(--spacing-md);
+}
+
+.testimonial-text::before,
+.testimonial-text::after {
+    content: '"';
+    font-size: 3rem;
+    color: var(--color-secondary);
+    opacity: 0.3;
+    position: absolute;
+}
+
+.testimonial-text::before {
+    top: 0;
+    left: 0;
+}
+
+.testimonial-text::after {
+    bottom: -1.5rem;
+    right: 0;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin-right: var(--spacing-md);
+}
+
+/* Sección de llamada a la acción */
+.cta {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: white;
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-xl);
+}
+
+.cta h2 {
+    margin-bottom: var(--spacing-md);
+}
+
+.cta p {
+    max-width: 600px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+/* Sección de información de contacto */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.info-card {
+    background-color: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.info-icon {
+    font-size: 2rem;
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-dark);
+    color: white;
+    padding: var(--spacing-lg) 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+}
+
+.footer-column h3 {
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-secondary);
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-column ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-column ul li a:hover {
+    color: var(--color-secondary);
+    padding-left: var(--spacing-sm);
+}
+
+.social-links {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from { 
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        margin-top: var(--spacing-md);
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    nav ul li {
+        margin: 0 var(--spacing-sm);
+    }
+    
+    .emergency-button {
+        margin-top: var(--spacing-md);
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .btn-secondary {
+        margin-left: 0;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-column h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+
+/* -----------------------------------------------------ESTILOS PAGINA DE FORMULARIO DE CONTACTO --------------------------------------*/
+
+    
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+  }
+    
+  /* Header */
+  header {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+    
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+    
+  /* Navbar */
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+    
+  .navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+  }
+    
+  .navbar a:hover {
+    background-color: #00b4d8;
+    color: #fff;
+  }
+    
+  .navbar a.active {
+    background-color: #023e8a;
+    color: #ffd60a;
+  }
+    
+  /* Main */
+  main.contacto {
+    max-width: 70%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  }
+    
+  main h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #0077b6;
+  }
+    
+  /* Formulario */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+    
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+    
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+    
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #0077b6;
+    outline: none;
+  }
+    
+  .contact-form button {
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100px;
+  }
+    
+  .contact-form button:hover {
+    background-color: #023e8a;
+  }
+    
+  
+/*----------------------------- ESTILOS DE INFORMACION INSTITUCIONAL --------------------------------------------------------*/
+     * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.header {
+    background-color: #2b5e8e; 
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 32px;
+}
+
+.header h1 {
+    margin-bottom: 8px;
+    font-size: 2.2rem;
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.section {
+    background-color: white;
+    padding: 24px;
+    margin: 24px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    color: #2b5e8e;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.content p {
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+.values-list {
+    list-style: none;
+}
+.values-list li {
+    background-color: #f0f0f0;
+    margin-bottom: 8px;
+    padding: 16px;
+    border-left: 4px solid #2b5e8e;
+    border-radius: 4px;
+}
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.equipment-item {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.clinica-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    background-color: #2b5e8e;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #1f456b;
+}
+
+@media (max-width: 768px) {
+    .section .btn {
+        display: block;             
+        width: 100%;                 
+        font-size: 1.1rem;           
+        padding: 14px;              
+        margin: 12px 0;             
+        text-align: center;       
+    }
+
+/*----------------------------- ESTILOS DE ADMIN-----------------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 2rem;
+}
+
+.header {
+    background-color: #2b5e8e; 
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 32px;
+    border-radius: 8px;
+}
+
+.header h1 {
+    margin-bottom: 8px;
+    font-size: 2.2rem;
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.section {
+    background-color: white;
+    padding: 24px;
+    margin: 24px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    color: #2b5e8e;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+form input[type="text"] {
+    flex: 1 1 45%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+form input[type="text"]:focus {
+    border-color: #2b5e8e;
+    outline: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+thead {
+    background-color: #2b5e8e;
+    color: white;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    background-color: #2b5e8e;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #1f456b;
+}
+
+#medicosTable button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    margin: 0 0.3rem;
+}
+
+#medicosTable button:first-child {
+    background-color: #4fb0c6;
+}
+
+#medicosTable button:last-child {
+    background-color: #ff6b6b;
+}
+
+@media (max-width: 768px) {
+    form {
+        flex-direction: column;
+    }
+
+    form input[type="text"] {
+        flex: 1 1 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        margin: 12px 0;
+    }
+}
+>>>>>>> Stashed changes
