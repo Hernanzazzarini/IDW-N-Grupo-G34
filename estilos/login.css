@@ -1,0 +1,134 @@
+/* ======== Estilos generales ======== */
+* {
+  box-sizing: border-box; /* Evita que los padding rompan el layout */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #0077B6;
+  margin-top: 40px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* ======== Contenedor del formulario ======== */
+.login-container {
+  background-color: #0077B6;
+  margin-top: 30px;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* ======== Formulario ======== */
+.login-form label {
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+  text-align: left;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+}
+
+.login-form input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 5px rgba(59,130,246,0.5);
+}
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #1e40af;
+}
+
+/* ======== Botón  volver ======== */
+.btn-volver {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #1e40af;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: #0d3b8e;
+}
+
+/* ======== Texto de error ======== */
+.error-text {
+  color: #ffdddd;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ======== Responsividad ======== */
+@media (max-width: 768px) {
+  .login-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .login-form input {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .btn-login,
+  .btn-volver {
+    font-size: 0.9rem;
+    padding: 10px;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
