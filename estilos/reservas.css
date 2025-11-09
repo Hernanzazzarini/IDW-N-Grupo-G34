@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.formulario_reservas {
+    background-color:#0077B6 ;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: white;
+}
+
+select, input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #2563eb;
+}
+
+#lista_reservas {
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reserva-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.eliminar {
+    background: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.eliminar:hover {
+    background: #b91c1c;
+}
+.volver{
+    display: block;
+    width: 180px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+#valor_total{
+    color: white;
+}
+.volver:hover{
+    background-color: rgb(10, 104, 104);
+}
+
+/* Responsive */
+ @media (max-width: 600px) {
+    .formulario_reservas, #lista_reservas {
+        width: 90%;
+        padding: 10px;
+    }
+} 
+/* Ajuste general para tablets pequeñas */
+@media (max-width: 768px) {
+    select, input {
+      width: 95%;
+      font-size: 0.95rem;
+    }
+  }
+  
+  /* Para pantallas móviles comunes */
+  @media (max-width: 480px) {
+    select, input {
+      width: 90%;
+      font-size: 0.9rem;
+      padding: 6px;
+    }
+  
+    label {
+      font-size: 0.9rem;
+    }
+  
+    .formulario_reservas {
+      width: 95%;
+      padding: 10px;
+    }
+  
+    .btn {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+  
+  /* Para móviles muy pequeños (menores a 360px) */
+  @media (max-width: 360px) {
+    select, input {
+      width: 85%;
+      font-size: 0.85rem;
+    }
+  
+    .btn {
+      width: 85%;
+    }
+  }
+  

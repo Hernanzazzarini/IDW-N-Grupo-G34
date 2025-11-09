@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservar Turno</title>
+  <link rel="stylesheet" href="../estilos/reservas.css">
+</head>
+<body>
+  <h1 class="titulo-principal">Reservar Turno</h1>
+
+  <section class="formulario_reservas">
+    <form id="formreserva" class="formulario-personalizado">
+
+      <label for="seleccionarmedico">Seleccionar médico:</label>
+      <select id="seleccionarmedico" required>
+        <option value="">-- Selecciona un médico --</option>
+        <option value="1-Lopez" data-categoria="Cirugía">Dra. Mariana Lopez - Cirugía</option>
+        <option value="2-Reinozo" data-categoria="Cardiología">Oscar Reinozo - Cardiología</option>
+        <option value="3-Candido" data-categoria="Pediatría">Matías Candido - Pediatría</option>
+        <option value="4-Etchegoyen" data-categoria="Radiología">Álvaro Etchegoyen - Radiología</option>
+      </select>
+
+      <label for="categoria">Categoría:</label>
+      <select id="categoria" required>
+        <option value="">-- Selecciona una categoría --</option>
+        <option value="Cirugía">Cirugía</option>
+        <option value="Cardiología">Cardiología</option>
+        <option value="Pediatría">Pediatría</option>
+        <option value="Radiología">Radiología</option>
+      </select>
+
+      <label for="selec_obrasocial">Obra social:</label>
+      <select id="selec_obrasocial" required>
+        <option value="">-- Selecciona una obra social --</option>
+        <option value="1-IOMA">IOMA</option>
+        <option value="2-OSDE">OSDE</option>
+        <option value="3-UOM">UOM</option>
+        <option value="4-Swiss Medical">Swiss Medical</option>
+      </select>
+
+      <label for="fecha_turno">Fecha:</label>
+      <input type="date" id="fecha_turno" required>
+
+      <label for="hora_turno">Hora:</label>
+      <input type="time" id="hora_turno" required>
+
+      <p id="valor_total">Valor total: $0</p>
+
+      <button type="submit" class="btn">Confirmar reserva</button>
+    </form>
+  </section>
+
+  <section id="misreservas">
+    <h2>Mis reservas</h2>
+    <div id="lista_reservas"></div>
+    <a href="../index.html" class="volver">Volver</a>
+  </section>
+
+  <script src="../js/reservas.js"></script>
+</body>
+</html>
