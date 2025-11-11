@@ -46,47 +46,11 @@
 
         <!--CARDS Boostrap nuestros profesionales -->
         <section class="tarjet">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card">
-                        <img  src="./imagenes/cirujana.jpg" class="medico1 card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Mariana Lopez.Cirujana</h5>
-                            <p class="card-text">Medica cirujana especializada en procedimientos generales y minimamente
-                                invasivos.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="./imagenes/cardiologo.jpg" class=" medico1 card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Oscar Reinozo.Cardiologo</h5>
-                            <p class="card-text">Diploma de honor en procedimientos cardiologicos avanzados.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img  src="./imagenes/pediatra.jpg" class="medico1 card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Matìas Candido.Pediatra</h5>
-                            <p class="card-text">Pediatra con 30 años de experiencia en niños y adolescentes </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img  src="./imagenes/radiologo.jpg" class=" medico1 card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Alvaro Echegoyen.Radiologo </h5>
-                            <p class="card-text">Radiologo y especialista en diagnostico por imagenes.</p>
-                        </div>
-                    </div>
-                </div>
+            <div id="catalogo-medicos" class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Las tarjetas se generarán aquí con JS -->
             </div>
-
         </section>
+        
         <!-- Sección de servicios -->
         <section class="container ">
             <h2 class="section-title">Nuestros Servicios</h2>
@@ -301,8 +265,31 @@
             </div>
         </div>
     </footer>
+   
     <script src="./js/animaciones.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/base.js"></script>
+    <script>
+        const contenedor = document.getElementById('catalogo-medicos');
+
+medicos.forEach(medico => {
+  const col = document.createElement('div');
+  col.className = 'col';
+
+  col.innerHTML = `
+    <div class="card">
+      <img src="${medico.imagen}" class="medico1 card-img-top" alt="${medico.nombre}">
+      <div class="card-body">
+        <h5 class="card-title">${medico.nombre} - ${medico.especialidad}</h5>
+        <p class="card-text">${medico.descripcion}</p>
+      </div>
+    </div>
+  `;
+
+  contenedor.appendChild(col);
+});
+
+    </script>
 </body>
 
 </html>
