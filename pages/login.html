@@ -3,17 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login</title>
-  <link rel="stylesheet" href="../estilos/styles.css" />
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="../estilos/login.css" />
 </head>
 <body>
   <h1>Iniciar Sesión</h1>
-  <form id="loginForm">
-    <input type="text" name="username" placeholder="Usuario" required />
-    <input type="password" name="password" placeholder="Contraseña" required />
-    <button type="submit">Ingresar</button>
-  </form>
-  <p id="error" style="color:red"></p>
+
+  <div class="login-container">
+    <form id="loginForm" class="login-form">
+      <label for="username">Usuario</label>
+      <input type="text" id="username" name="username" placeholder="Ingrese su usuario" required />
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required />
+
+      <button type="submit" class="btn-login">Ingresar</button>
+      <p id="error" class="error-text"></p>
+    </form>
+    <a href="../index.html" class="btn-volver">← Volver al inicio</a>
+  </div>
 
   <script type="module" src="../js/login.js"></script>
 </body>
